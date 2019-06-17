@@ -1,0 +1,11 @@
+﻿<h1>Ola, {{currentUser.name}}!</h1>
+<p>Esta é uma aplicação de teste realizada com</p>
+<h5>ASP NET CORE 2.2 E ANGULAR 6</h5>
+<h3>Todos Usuários Cadastrados:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.email}} ({{user.name}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Excluir</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>
